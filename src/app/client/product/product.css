@@ -1,0 +1,109 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#hero {
+  background: url('https://wallpapercave.com/wp/wp7453551.jpg') center/cover no-repeat;
+  height: 300px;
+}
+
+/* Card styling */
+.category-card img,
+.product-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid #ffc107;
+}/* Reset body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Header tổng thể */
+.header {
+  background-color: #212529; /* Màu nền tối */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header__logo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Menu điều hướng */
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header__nav a:hover,
+.header__nav .active-link {
+  color: #ffc107; /* Vàng khi hover/active */
+}
+
+/* Auth (tài khoản) */
+.header__auth .btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+  font-size: 0.95rem;
+}
+
+.header__auth .btn-outline-light:hover {
+  background-color: #fff;
+  color: #212529;
+}
+

@@ -1,0 +1,54 @@
+/* Toàn màn hình với background màu nhẹ */
+.container {
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card form */
+.card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Tiêu đề */
+.card h3 {
+  font-weight: 700;
+}
+
+/* Input focus */
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 5px rgba(78, 115, 223, 0.4);
+}
+
+/* Nút đăng nhập */
+.btn-primary {
+  background: #4e73df;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2e59d9;
+}
+
+/* Link đăng ký */
+a.text-decoration-none {
+  color: #4e73df;
+  font-weight: 500;
+}
+
+a.text-decoration-none:hover {
+  text-decoration: underline;
+}
+
+/* Responsive nhỏ */
+@media (max-width: 576px) {
+  .card {
+    margin: 0 10px;
+  }
+}

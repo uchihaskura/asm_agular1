@@ -1,0 +1,23 @@
+/* Gradient nền toàn trang */
+.container {
+  background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+}
+
+/* Card form */
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+}
+
+/* Input spacing */
+.form-control {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Button hover */
+.btn-success:hover {
+  background-color: #198754;
+}
