@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';     // ✅ cho *ngIf, *ngFor
 import { FormsModule } from '@angular/forms';       // ✅ cho [(ngModel)]
 import { RouterLink } from '@angular/router';
+import { ProductService , Product} from '../../services/product.service';
 
 @Component({
   standalone: true,                                 // ✅ thêm dòng này
@@ -11,17 +12,24 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, FormsModule,RouterLink]              // ✅ thêm dòng này
 })
 export class ProductListComponent {
+  products: Product[]=[];
+
   filterText = '';
 
-  products = [
-    { id: 1, name: 'Shoe A', price: 100, inStock: true },
-    { id: 2, name: 'Shoe B', price: 150, inStock: false },
-    { id: 3, name: 'Shoe C', price: 200, inStock: true },
-    { id: 4, name: 'Shoe D', price: 250, inStock: false },
-    { id: 5, name: 'Shoe E', price: 300, inStock: true }
-  ];
 
-  filterProducts() {
+    constructor(private productService:ProductService){}
+  
+    ngOnInit(){
+      this.productService.getProducts().subscribe({
+        next: (data) => {
+          console.log(data);
+          this.products = data
+        },
+        error:(err)=>
+          console.log(err)
+      })
+    }
+    filterProducts() {
     return this.products.filter(p =>
       p.name.toLowerCase().includes(this.filterText.toLowerCase())
     );

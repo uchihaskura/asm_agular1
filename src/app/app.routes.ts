@@ -14,6 +14,7 @@ import { UserAddComponent } from './admin/user-create/user-create';
 import { ProductListComponent } from './admin/product-list/product-list';
 import { BrandList } from './admin/brand-list/brand-list';
 import { CategoryList } from './admin/category-list/category-list';
+import { ProductUpdate } from './admin/product-update/product-update';
 
 
 
@@ -64,6 +65,7 @@ export const routes: Routes = [
         { path: 'brand-list',component:BrandList },
         { path: 'user',component:UserList },
         { path: 'user-create', component: UserAddComponent },
+        { path: 'products/update/:id',component: ProductUpdate,},
        
 
   
